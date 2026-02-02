@@ -8,9 +8,18 @@
 - **丰富引用**：所有信息均来自实时搜索，并附带准确的参考文献。
 
 ## 安装与配置
-安装后需确保 Eden 环境已配置以下 API 密钥：
-- `LLM_PROVIDER_KEY` (推荐使用 GPT-4 或 Kimi 等高性能模型)
-- `TAVILY_API_KEY` (搜索接口)
+
+由于 STORM 依赖较重，安装此 Agent 后需要进行简单的本地初始化：
+
+1. **进入目录**：在您的 Eden 项目根目录下，确保已创建 `external/storm_researcher` 目录并将此仓库的文件下载到其中。
+2. **运行安装脚本**：
+   ```bash
+   cd external/storm_researcher
+   bash setup.sh
+   ```
+3. **配置密钥**：确保 Eden 的 `.env` 文件中已配置以下 API 密钥：
+   - `LLM_PROVIDER_KEY` (推荐使用 GPT-4 或 Kimi 等高性能模型)
+   - `TAVILY_API_KEY` (搜索接口)
 
 ## 使用方法
 在聊天中 @STORM Researcher 并输入你想研究的主题即可。

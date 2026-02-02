@@ -11,9 +11,9 @@
     ],
     "mcpServers": {
         "storm": {
-            "command": "/Users/suhe/Downloads/eden/AgentX/external/storm/venv/bin/python",
+            "command": "external/storm_researcher/venv/bin/python",
             "args": [
-                "/Users/suhe/Downloads/eden/AgentX/external/storm/mcp_storm.py"
+                "external/storm_researcher/mcp_storm.py"
             ]
         }
     }
