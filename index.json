@@ -49,6 +49,23 @@
         "general"
       ],
       "createdAt": 1770005046611
+    },
+    {
+      "id": "promptx_product-manager",
+      "name": "产品经理",
+      "avatar": "💼",
+      "description": "我是一名产品经理，专注于基于福格行为模型(Fogg Behavior Model)的产品设计与分析。",
+      "publisherName": "苏河",
+      "version": "1.0.0",
+      "downloads": 0,
+      "rating": 5,
+      "tags": [
+        "promptx_role",
+        "writing",
+        "chat",
+        "general"
+      ],
+      "createdAt": 1770005197256
     }
   ]
 }
