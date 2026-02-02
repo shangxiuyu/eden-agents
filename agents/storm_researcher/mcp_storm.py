@@ -9,7 +9,7 @@ from knowledge_storm import (
     STORMWikiRunner,
     STORMWikiLMConfigs,
 )
-from knowledge_storm.lm import OpenAIModel
+from knowledge_storm.lm import OpenAIModel, LitellmModel
 from knowledge_storm.rm import TavilySearchRM
 
 # Configure logging to stderr
@@ -110,8 +110,6 @@ def run_storm_research(topic):
         "top_p": 0.9,
     }
 
-    from knowledge_storm.lm import LitellmModel
-    
     # Use LitellmModel as it is more robust for custom endpoints
     # For litellm, we specify the provider in the model name if needed
     litellm_model = model_name
