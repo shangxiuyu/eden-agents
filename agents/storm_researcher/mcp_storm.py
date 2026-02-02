@@ -110,19 +110,23 @@ def run_storm_research(topic):
         "top_p": 0.9,
     }
 
-    # Kimi / OpenAI compatible workaround for dspy
-    # Ensure api_base has trailing slash to avoid URL assembly errors (e.g. /v1chat/completions)
-    if openai_api_base and not openai_api_base.endswith('/'):
-        openai_api_base += '/'
+    from knowledge_storm.lm import LitellmModel
+    
+    # Use LitellmModel as it is more robust for custom endpoints
+    # For litellm, we specify the provider in the model name if needed
+    litellm_model = model_name
+    if not "/" in litellm_model:
+        litellm_model = f"openai/{litellm_model}"
+    
+    # Kimi requires temperature=1.0. We ensure it's set.
+    lm_kwargs = {
+        "api_key": openai_api_key,
+        "api_base": openai_api_base,
+        "temperature": 1.0,
+        "top_p": 1.0, # Kimi defaults
+    }
 
-    effective_model = model_name
-    # Some dspy versions prefer the openai/ prefix for custom endpoints
-    if openai_api_base and "moonshot" in openai_api_base:
-        if not effective_model.startswith("openai/"):
-            effective_model = f"openai/{effective_model}"
-
-    openai_kwargs["api_base"] = openai_api_base
-    default_lm = OpenAIModel(model=effective_model, max_tokens=1000, model_type="chat", **openai_kwargs)
+    default_lm = LitellmModel(model=litellm_model, max_tokens=2000, **lm_kwargs)
     
     lm_configs.set_conv_simulator_lm(default_lm)
     lm_configs.set_question_asker_lm(default_lm)
