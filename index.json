@@ -82,6 +82,22 @@
         "system_automation"
       ],
       "createdAt": 1770027001874
+    },
+    {
+      "id": "storm_researcher",
+      "name": "STORM Researcher",
+      "avatar": "⛈️",
+      "description": "专业深度研究助手。由 Stanford STORM 驱动，擅长对复杂话题进行多维度调研，并生成带有丰富引用的长篇研究报告。注意：研究过程可能需要几分钟时间。",
+      "publisherName": "苏河",
+      "version": "1.0.0",
+      "downloads": 0,
+      "rating": 5.0,
+      "tags": [
+        "deep_research",
+        "report_generation",
+        "citations"
+      ],
+      "createdAt": 1770027001874
     }
   ]
 }
