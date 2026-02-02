@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "exportedAt": 1770006620183,
+  "exportedAt": 1770007255897,
   "agent": {
     "id": "promptx_product-manager",
     "name": "产品经理",
@@ -17,6 +17,8 @@
       "source": "promptx",
       "originalName": "product-manager",
       "usesSharedMCPPool": true,
+      "localPath": "/Users/suhe/.promptx/resource/role/product-manager",
+      "isLocal": true,
       "publisherName": "苏河",
       "version": "1.0.0"
     }
