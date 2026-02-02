@@ -110,8 +110,15 @@ def run_storm_research(topic):
         "top_p": 0.9,
     }
 
-    # Use the same model for everything for simplicity in this bridge
-    default_lm = OpenAIModel(model=model_name, max_tokens=1000, **openai_kwargs)
+    # Kimi / OpenAI compatible workaround for dspy
+    # If using a custom api_base, dspy might need 'openai/' prefix in model name
+    # to correctly route the request and avoid 404 on model discovery.
+    effective_model = model_name
+    if openai_api_base and "moonshot" in openai_api_base:
+        if not effective_model.startswith("openai/"):
+            effective_model = f"openai/{effective_model}"
+
+    default_lm = OpenAIModel(model=effective_model, max_tokens=1000, **openai_kwargs)
     
     lm_configs.set_conv_simulator_lm(default_lm)
     lm_configs.set_question_asker_lm(default_lm)
