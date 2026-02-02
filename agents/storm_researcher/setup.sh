@@ -33,7 +33,7 @@ fi
 # 4. Install dependencies
 echo "📦 Installing dependencies (this may take a few minutes)..."
 ./venv/bin/pip install --upgrade pip
-./venv/bin/pip install knowledge-storm
+./venv/bin/pip install knowledge-storm tavily-python
 
 echo "✅ Setup complete!"
 echo ""
