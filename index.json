@@ -66,6 +66,22 @@
         "general"
       ],
       "createdAt": 1770007255916
+    },
+    {
+      "id": "openclaw",
+      "name": "OpenClawAgent",
+      "avatar": "🦞",
+      "description": "全能自动化专家。精通文件与代码管理、网络信息检索、跨平台通讯(Telegram/WhatsApp/Discord)、浏览器自动化和系统任务调度。可以帮你读写编辑文件、运行代码、控制浏览器、查天气、发送消息、设置定时任务等实用功能。",
+      "publisherName": "苏河",
+      "version": "1.0.0",
+      "downloads": 0,
+      "rating": 5,
+      "tags": [
+        "cross_platform_messaging",
+        "browser_control",
+        "system_automation"
+      ],
+      "createdAt": 1770026570203
     }
   ]
 }
