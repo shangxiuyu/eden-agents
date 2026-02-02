@@ -20,9 +20,9 @@ git branch -M main
 
 echo "Configuring remote..."
 if git remote | grep -q origin; then
-    git remote set-url origin https://github.com/shangxiuyu/eden-agent-market.git
+    git remote set-url origin https://github.com/shangxiuyu/eden-agents.git
 else
-    git remote add origin https://github.com/shangxiuyu/eden-agent-market.git
+    git remote add origin https://github.com/shangxiuyu/eden-agents.git
 fi
 
 echo "Pushing to GitHub..."
